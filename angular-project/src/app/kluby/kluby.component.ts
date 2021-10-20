@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { KLUBY } from '../kluby-mod';
+import { KLUBY } from '../mock-kluby';
 import { Klub } from '../klub';
 
  
@@ -18,7 +18,9 @@ export class KlubyComponent implements OnInit {
   klub: Klub = {
     id: 1,
     name: 'Real Madryt'
+  
   };
+  
   
   
   
