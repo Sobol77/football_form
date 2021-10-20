@@ -12,7 +12,16 @@ import { Klub } from '../klub';
   styleUrls: ['./kluby.component.scss']
 })
 export class KlubyComponent implements OnInit {
-    kluby = KLUBY;
+  
+  kluby = KLUBY;
+ 
+  klub: Klub = {
+    id: 1,
+    name: 'Real Madryt'
+  };
+  
+  
+  
    
 
      
