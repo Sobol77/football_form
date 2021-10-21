@@ -14,6 +14,7 @@ import { Klub } from '../klub';
 export class KlubyComponent implements OnInit {
   
   kluby = KLUBY;
+  selectedKlub?: Klub;
  
   klub: Klub = {
     id: 1,
@@ -32,4 +33,7 @@ export class KlubyComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelect(klub: Klub): void {
+     this.selectedKlub = klub;
+  }
 }

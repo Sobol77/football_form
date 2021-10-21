@@ -1,10 +1,22 @@
 <h2>clubs on the list</h2>
 
 <ul class="kluby">
-  <li *ngFor="let klub of kluby">
+  <li *ngFor="let klub of kluby" (click)="onSelect(klub)">
     <span class="badge">{{ klub.id }} </span> {{ klub.name }}
   </li>
 
 
 </ul>
+<div  *ngIf="selectedKlub">
+  <h2>{{selectedKlub.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedKlub.id}}</div>
+<div>
+  <label for="klub-name">Club name: </label>
+  <input id="klub-name" [(ngModel)]="selectedKlub.name" placeholder="name">
+</div>
+
+
+
+</div>
+
 
