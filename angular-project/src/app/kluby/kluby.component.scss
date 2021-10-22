@@ -4,7 +4,7 @@
     padding: 0;
     width: 15em;
   }
-  .kluby li {
+  li {
     cursor: pointer;
     position: relative;
     left: 0;
@@ -15,24 +15,24 @@
     height: 1.6em;
     border-radius: 4px;
   }
-  .kluby li:hover {
+   li:hover {
     color: #2c3a41;
     background-color: #e6e6e6;
     left: .1em;
   }
-  .kluby li.selected {
+   li.selected {
     background-color: black;
-    color: white;
+    color: rgb(177, 65, 65);
   }
-  .kluby li.selected:hover {
+   li.selected:hover {
     background-color: #ffffff;
     color: white;
   }
-  .kluby li.selected:active {
+   li.selected:active {
     background-color: black;
-    color: white;
+    color: rgb(197, 74, 74);
   }
-  .kluby .badge {
+   .badge {
     display: inline-block;
     font-size: small;
     color: white;

@@ -1,7 +1,7 @@
 <h2>clubs on the list</h2>
 
 <ul class="kluby">
-  <li *ngFor="let klub of kluby" (click)="onSelect(klub)">
+  <li *ngFor="let klub of kluby" (click)="onSelect(klub)" [class.selected]="klub === selectedKlub">
     <span class="badge">{{ klub.id }} </span> {{ klub.name }}
   </li>
 
@@ -14,7 +14,7 @@
   <label for="klub-name">Club name: </label>
   <input id="klub-name" [(ngModel)]="selectedKlub.name" placeholder="name">
 </div>
-
+<div>
 
 
 </div>
