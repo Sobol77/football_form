@@ -7,16 +7,6 @@
 
 
 </ul>
-<div  *ngIf="selectedKlub">
-  <h2>{{selectedKlub.name | uppercase}} Details</h2>
-<div><span>id: </span>{{selectedKlub.id}}</div>
-<div>
-  <label for="klub-name">Club name: </label>
-  <input id="klub-name" [(ngModel)]="selectedKlub.name" placeholder="name">
-</div>
-<div>
 
-
-</div>
-
+<app-klub-detail [klub]="selectedKlub"></app-klub-detail>
 

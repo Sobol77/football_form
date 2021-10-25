@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Klub } from '../klub';
+
 
 @Component({
   selector: 'app-klub-detail',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./klub-detail.component.scss']
 })
 export class KlubDetailComponent implements OnInit {
+
+  @Input() klub? : Klub;
 
   constructor() { }
 
