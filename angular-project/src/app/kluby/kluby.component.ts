@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { KLUBY } from '../mock-kluby';
 import { Klub } from '../klub';
+import { KlubService } from '../klub.service';
 
  
 
@@ -13,7 +14,7 @@ import { Klub } from '../klub';
 })
 export class KlubyComponent implements OnInit {
   
-  kluby = KLUBY;
+  kluby: Klub[] = [];
   selectedKlub?: Klub;
  
   klub: Klub = {
@@ -28,9 +29,14 @@ export class KlubyComponent implements OnInit {
    
 
      
-  constructor() { }
+  constructor(private klubService: KlubService) { }
 
   ngOnInit(): void {
+    this.getKluby();
+  }
+
+  getKluby(): void{
+    this.kluby = this.klubService.getKluby();
   }
 
   onSelect(klub: Klub): void {
