@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KlubyComponent } from './kluby/kluby.component';
 import { KlubDetailComponent } from './klub-detail/klub-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KlubyComponent,
-    KlubDetailComponent
+    KlubDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

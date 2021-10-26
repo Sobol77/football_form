@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { KLUBY } from '../mock-kluby';
 import { Klub } from '../klub';
 import { KlubService } from '../klub.service';
+import { MessageService } from '../message.service';
 
  
 
@@ -29,7 +30,7 @@ export class KlubyComponent implements OnInit {
    
 
      
-  constructor(private klubService: KlubService) { }
+  constructor(private klubService: KlubService, private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.getKluby();
@@ -47,5 +48,8 @@ export class KlubyComponent implements OnInit {
 
   onSelect(klub: Klub): void {
      this.selectedKlub = klub;
+     this.messageService.add(`ClubsComponent: Selected hero id=${klub.id}`) 
+   
+   
   }
 }
