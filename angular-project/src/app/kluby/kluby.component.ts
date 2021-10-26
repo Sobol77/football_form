@@ -36,8 +36,14 @@ export class KlubyComponent implements OnInit {
   }
 
   getKluby(): void{
-    this.kluby = this.klubService.getKluby();
+    this.klubService.getKluby()
+    .subscribe(x => {
+      console.log(x);
+      this.kluby = x;
+    })
   }
+
+  
 
   onSelect(klub: Klub): void {
      this.selectedKlub = klub;
