@@ -8,8 +8,12 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <h1> Football App</h1>
-<app-kluby></app-kluby>
-<app-klub-detail></app-klub-detail>
+<nav>
+    <a routerLink='/kluby'>Clubs</a>
+    <a routerLink='/dashboard'>Dashboard</a> 
+</nav>
+<router-outlet></router-outlet>
+
 <app-messages></app-messages>
 
 

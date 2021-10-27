@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { KlubyComponent } from './kluby/kluby.component';
 import { KlubDetailComponent } from './klub-detail/klub-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KlubyComponent,
     KlubDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

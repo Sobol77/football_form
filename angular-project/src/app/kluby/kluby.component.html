@@ -1,12 +1,17 @@
 <h2>clubs on the list</h2>
-
 <ul class="kluby">
-  <li *ngFor="let klub of kluby" (click)="onSelect(klub)" [class.selected]="klub === selectedKlub">
-    <span class="badge">{{ klub.id }} </span> {{ klub.name }}
+
+
+
+
+  <li *ngFor="let klub of kluby">
+    <a routerLink="/detail/{{klub.id}}">
+     <span class="badge">{{ klub.id }} </span> {{ klub.name }}
+    </a>
   </li>
 
 
 </ul>
 
-<app-klub-detail [klub]="selectedKlub"></app-klub-detail>
+
 

@@ -8,6 +8,12 @@ import { MessageService } from './message.service';
 })
 export class KlubService {
 
+  getKlub(id: number): Observable<Klub>{
+    const klub = KLUBY.find(h => h.id == id)!;
+    this.messageService.add(`ClubService: fetched club id=${id}`)
+    return of(klub);
+  }
+
   constructor(private messageService: MessageService) { }
 
 

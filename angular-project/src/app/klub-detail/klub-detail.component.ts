@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Klub } from '../klub';
+import { KlubService } from '../klub.service';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -9,11 +12,19 @@ import { Klub } from '../klub';
 })
 export class KlubDetailComponent implements OnInit {
 
-  @Input() klub? : Klub;
+   klub? : Klub;
 
-  constructor() { }
+  constructor(private klubService: KlubService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
+    this.getKlub();
+  }
+  getKlub() {
+     const id = Number(this.route.snapshot.paramMap.get('id'));
+     this.klubService.getKlub(id).subscribe(x => this.klub = x);
+  }
+  goBack(): void{
+    this.location.back();
   }
 
 }

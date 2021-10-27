@@ -48,7 +48,7 @@ export class KlubyComponent implements OnInit {
 
   onSelect(klub: Klub): void {
      this.selectedKlub = klub;
-     this.messageService.add(`ClubsComponent: Selected hero id=${klub.id}`) 
+     this.messageService.add(`Clubs   Component: Selected hero id=${klub.id}`) 
    
    
   }
