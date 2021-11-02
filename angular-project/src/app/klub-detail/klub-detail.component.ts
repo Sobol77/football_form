@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 })
 export class KlubDetailComponent implements OnInit {
 
-   klub? : Klub;
+  klub?: Klub;
 
   constructor(private klubService: KlubService, private route: ActivatedRoute, private location: Location) { }
 
@@ -20,10 +20,11 @@ export class KlubDetailComponent implements OnInit {
     this.getKlub();
   }
   getKlub() {
-     const id = Number(this.route.snapshot.paramMap.get('id'));
-     this.klubService.getKlub(id).subscribe(x => this.klub = x);
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.klubService.getKlub(id)
+      .subscribe(klub => this.klub = klub);
   }
-  goBack(): void{
+  goBack(): void {
     this.location.back();
   }
 

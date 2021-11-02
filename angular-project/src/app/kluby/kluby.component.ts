@@ -4,7 +4,7 @@ import { Klub } from '../klub';
 import { KlubService } from '../klub.service';
 import { MessageService } from '../message.service';
 
- 
+
 
 
 
@@ -14,42 +14,28 @@ import { MessageService } from '../message.service';
   styleUrls: ['./kluby.component.scss']
 })
 export class KlubyComponent implements OnInit {
-  
+
   kluby: Klub[] = [];
   selectedKlub?: Klub;
- 
-  klub: Klub = {
-    id: 1,
-    name: 'Real Madryt'
-  
-  };
-  
-  
-  
-  
-   
 
-     
+ 
+
+
+
+
+
   constructor(private klubService: KlubService, private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.getKluby();
   }
 
-  getKluby(): void{
+  getKluby(): void {
     this.klubService.getKluby()
-    .subscribe(x => {
-      console.log(x);
-      this.kluby = x;
-    })
+      .subscribe(kluby => this.kluby = kluby);
   }
 
-  
 
-  onSelect(klub: Klub): void {
-     this.selectedKlub = klub;
-     this.messageService.add(`Clubs   Component: Selected hero id=${klub.id}`) 
-   
-   
-  }
+
+
 }

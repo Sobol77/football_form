@@ -1,9 +1,9 @@
-<div  *ngIf="klub">
-    <h2>{{klub.name | uppercase}} Details</h2>
+<div *ngIf="klub">
+  <h2>{{klub.name | uppercase}} Details</h2>
   <div><span>id: </span>{{klub.id}}</div>
   <div>
     <label for="klub-name">Club name: </label>
     <input id="klub-name" [(ngModel)]="klub.name" placeholder="name">
   </div>
-
   <button (click)="goBack()">go back</button>
+</div>

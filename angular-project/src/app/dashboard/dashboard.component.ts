@@ -17,7 +17,8 @@ export class DashboardComponent implements OnInit {
     this.getKluby();
   }
   getKluby() {
-    this.klubService.getKluby().subscribe( x => this.kluby = x.slice(1, 5));
+    this.klubService.getKluby()
+    .subscribe(kluby => this.kluby = kluby.slice(1, 5));
   }
 
 }

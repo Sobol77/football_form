@@ -1,17 +1,8 @@
 <h2>clubs on the list</h2>
 <ul class="kluby">
-
-
-
-
   <li *ngFor="let klub of kluby">
     <a routerLink="/detail/{{klub.id}}">
-     <span class="badge">{{ klub.id }} </span> {{ klub.name }}
+      <span class="badge">{{ klub.id }} </span> {{ klub.name }}
     </a>
   </li>
-
-
 </ul>
-
-
-

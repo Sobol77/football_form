@@ -7,19 +7,21 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class KlubService {
-
-  getKlub(id: number): Observable<Klub>{
-    const klub = KLUBY.find(h => h.id == id)!;
-    this.messageService.add(`ClubService: fetched club id=${id}`)
-    return of(klub);
-  }
-
   constructor(private messageService: MessageService) { }
 
-
+  
   getKluby(): Observable<Klub[]> {
     const kluby = of(KLUBY);
     this.messageService.add("Klub service: change");
     return kluby;
   }
+  getKlub(id: number): Observable<Klub> {
+    const klub = KLUBY.find(h => h.id == id)!;
+    this.messageService.add(`ClubService: fetched club id=${id}`)
+    return of(klub);
+  }
+
+  
+
+
 }
