@@ -1,0 +1,7 @@
+<p>Top clubs!</p>
+<div class="clubs-menu">
+  <a *ngFor="let klub of kluby" 
+  routerLink='/detail/{{klub.id}}'>
+    {{klub.name}}
+  </a>
+</div>

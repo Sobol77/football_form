@@ -7,7 +7,16 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<h1> Football app</h1>
+<h1> Football App</h1>
+<nav>
+    <a routerLink='/kluby'>Clubs</a>
+    <a routerLink='/dashboard'>Dashboard</a>
+</nav>
+<router-outlet></router-outlet>
+
+<app-messages></app-messages>
+
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
@@ -16,5 +25,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>
