@@ -1,7 +1,7 @@
-import { Klub } from './klub';
-
-
-export const KLUBY: Klub[] = [
+ import { Klub } from './klub';
+ 
+ 
+ export const KLUBY: Klub[] = [
   { id: 11, name: 'Barcelona' },
   { id: 12, name: 'Atletico Madryt' },
   { id: 13, name: 'Liverpool' },

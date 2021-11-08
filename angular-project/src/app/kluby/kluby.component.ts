@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { KLUBY } from '../mock-kluby';
+
 import { Klub } from '../klub';
 import { KlubService } from '../klub.service';
 import { MessageService } from '../message.service';
@@ -18,7 +18,7 @@ export class KlubyComponent implements OnInit {
   kluby: Klub[] = [];
   selectedKlub?: Klub;
 
- 
+
 
 
 
@@ -35,6 +35,14 @@ export class KlubyComponent implements OnInit {
       .subscribe(kluby => this.kluby = kluby);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.klubService.addKlub({ name } as Klub)
+      .subscribe(klub => {
+        this.kluby.push(klub);
+      });
+    }
 
 
 

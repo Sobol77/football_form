@@ -1,4 +1,13 @@
 <h2>clubs on the list</h2>
+
+<div>
+  <label for="new-klub">Klub name: </label>
+  <input id="new-klub" #klubName />
+  <button class="add-button" (click)="add(klubName.value); klubName.value=''">
+    Add club
+  </button>
+</div>
+
 <ul class="kluby">
   <li *ngFor="let klub of kluby">
     <a routerLink="/detail/{{klub.id}}">
